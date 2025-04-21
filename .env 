@@ -1,5 +1,3 @@
-MYSQL_HOST=mysql.railway.internal
-MYSQL_PORT=3306
-MYSQL_DATABASE=railway
-MYSQL_USER=root
+MYSQL_URL=jdbc:mysql://turntable.proxy.rlwy.net:59652/railway
+MYSQL_USERNAME=root
 MYSQL_PASSWORD=WbvTlStXUMbXLloqKDeVHFZfoJhKIFTS
