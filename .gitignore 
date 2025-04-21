@@ -1,0 +1,14 @@
+# Ignore environment config
+.env
+
+# Ignore compiled Java classes
+/target/
+/bin/
+
+# IntelliJ IDEA project files
+*.iml
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

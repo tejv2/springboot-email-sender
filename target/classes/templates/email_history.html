@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Email History</title>
+</head>
+<body>
+<h2>Sent Email History</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+    <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th>Attachments</th>
+
+    </tr>
+    <th:block th:each="email : ${emails}">
+        <tr>
+            <td th:text="${email.fromAddress}"></td>
+            <td th:text="${email.toAddress}"></td>
+            <td th:text="${email.subject}"></td>
+            <td th:text="${email.message}"></td>
+            <td th:text="${email.attachmentNames}"></td>
+
+        </tr>
+    </th:block>
+</table>
+
+<br>
+<a href="/email/form">← Back to Email Form</a>
+</body>
+</html>

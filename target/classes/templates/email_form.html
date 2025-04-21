@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Send Email</title>
+</head>
+<body>
+<h2>Send Email</h2>
+<p th:if="${successMessage}" th:text="${successMessage}" style="color: green;"></p>
+
+
+<!-- History Button -->
+<a href="/email/history">
+    <button type="button">View Sent Email History</button>
+</a>
+
+<br><br>
+
+<form action="/email/send" method="post" enctype="multipart/form-data">
+    <label>Your Gmail:</label><br>
+    <input type="email" name="from" required><br><br>
+
+    <label>Your Gmail App Password:</label><br>
+    <input type="password" name="appPassword" required><br><br>
+
+    <label>To:</label><br>
+    <input type="email" name="to" required><br><br>
+
+    <label>Subject:</label><br>
+    <input type="text" name="subject" required
+           oninvalid="this.setCustomValidity('Subject cannot be empty')"
+           oninput="this.setCustomValidity('')"><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" required></textarea><br><br>
+
+    <label>Attachments:</label><br>
+    <input type="file" name="attachments" multiple><br><br>
+
+    <input type="submit" value="Send Email">
+</form>
+</body>
+</html>
